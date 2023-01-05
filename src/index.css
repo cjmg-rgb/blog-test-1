@@ -1,13 +1,223 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+article.post {
+  box-shadow: 0 0 5px 0 black;
+  padding: 0.5rem;
 }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.App {
+  max-width: 500px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-shadow: 0 0 5px 0 black;
+}
+
+.main {
+  padding: 0 0.5rem;
+  flex-grow: 1;
+}
+
+nav {
+  margin-bottom: 0.5rem;
+}
+
+nav header {
+  padding: 0.5rem;
+  background-color: #66d8f5;
+}
+
+nav main {
+  background-color: #333;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+nav main input {
+  width: 80%;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 1rem 0;
+  column-gap: 1rem;
+}
+
+nav a {
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+nav a.active {
+  border-bottom: 3px solid #66d8f5;
+}
+
+footer {
+  text-align: center;
+  background-color: #66d8f5;
+}
+
+.post {
+  margin: 1rem 0;
+}
+
+.post a {
+  text-decoration: none;
+}
+
+.post a, 
+.post a:visited {
+  color: #000;
+}
+
+.post:first-child {
+  margin-top: 0;
+}
+
+.post:last-child {
+  border-bottom: none;
+}
+
+.post-date {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.post-body {
+  margin: 1rem 0;
+}
+
+.post-page button {
+  height: 48px;
+  min-width: 48px;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: red;
+  color: #fff;
+  cursor: pointer;
+}
+
+.newpost-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.newpost-form label {
+  margin-top: 1rem;
+}
+
+.newpost-form input[type='text'], 
+.newpost-form textarea {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  min-height: 48px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin-right: 0.25rem;
+  outline: none;
+}
+
+.newpost-form textarea {
+  height: 100px;
+}
+
+.newpost-form button {
+  margin-top: 1rem;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.not-found h2, .not-found h2, 
+.not-found p, .PostPage p {
+  margin-bottom: 1rem;
+}
+
+.PostPage button {
+  height: 48px;
+  min-width: 48px;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: red;
+  color: #fff;
+  cursor: pointer;
+}
+
+.statusMsg {
+  margin-top: 2rem;
+}
+
+/* @media only screen and (min-width: 610px) {
+  html {
+    font-size: 22px;
+  }
+
+  .Header h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    text-align: right;
+  }
+
+  nav li:hover, 
+  nav li:focus, 
+  nav li:hover a, 
+  nav li:focus a  {
+    background-color: #eee;
+    color: #333;
+  }
+
+  .search-form {
+    width: 50%;
+    padding: .5rem 0;
+  }
+ 
+  .search-form input[type="text"] {
+    margin-left: 0.5rem;
+  }
+
+  .newpost-form textarea {
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+
+  header svg {
+    font-size: 3rem;
+  }
+} */
